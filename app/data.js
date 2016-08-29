@@ -1,4 +1,29 @@
 var FAMILY_2015 = [
+  //Apr
+  "Washington, DC",
+  "Savannah, GA",
+  "Charlotte, NC",
+  "Paris, France",
+  "Charlotte, NC",
+  "Savannah, GA",
+  //May
+  "Atlanta, GA",
+  "Indianapolis, IN",
+  "Knoxville, KY",
+  "Savannah, GA",
+  //Jun
+  "Detroit, MI",
+  "London, UK",
+  "Nottingham, UK",
+  "Newark, UK",
+  "Nottingham, UK",
+  "Derbyshire, UK",
+  "Nottingham, UK",
+  "London, UK",
+  "Detroit, MI",
+  "Savannah, GA",
+  //Jul
+  "Atlanta, GA",
   "Savannah, GA",
   //Oct
   "Miami, FL",
@@ -80,6 +105,11 @@ var FAMILY_2016__ = [
 
 module.exports = {
   "Aryaman": [
+    "Savannah, GA",
+    "Atlanta, GA",
+    "Baltimore, MD",
+    "Atlanta, GA",
+    "Savannah, GA",
     FAMILY_2015,
     "Folkston, GA",
     "Savannah, GA",
@@ -88,6 +118,7 @@ module.exports = {
     FAMILY_2016__,
   ],
   "Amay": [
+    "Savannah, GA",
     FAMILY_2015,
     FAMILY_2016,
     "Greensboro, NC",
@@ -96,6 +127,11 @@ module.exports = {
     FAMILY_2016__,
   ],
   "Anshu": [
+    "Savannah, GA",
+    "Atlanta, GA",
+    "Baltimore, MD",
+    "Atlanta, GA",
+    "Savannah, GA",
     FAMILY_2015,
     FAMILY_2016,
     "Greensboro, NC",
@@ -108,6 +144,7 @@ module.exports = {
     FAMILY_2016__,
   ],
   "Amit": [
+    "Savannah, GA",
     FAMILY_2015,
     FAMILY_2016,
     "Greensboro, NC",
