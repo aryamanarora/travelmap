@@ -235,7 +235,7 @@ module.exports.makeBars = function(visitedByAtLeastN) {
       return (
         ((d.n == visitedByAtLeastN.length) ? "" : "&ge; ") +
         d.n +
-        " Wong" +
+        " Arora" +
         ((d.n == 1) ? "" : "s")
       );
     });
