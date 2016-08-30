@@ -1,11 +1,85 @@
-var FAMILY_2013 = [
-  //Feb
+var FAMILY_IMMIGRATION = [
+  "Delhi, India",
+  "New York, NY",
+  "Savannah, GA",
+];
+
+var FAMILY_2010 = [
+  //Dec 2009
+  "Atlanta, GA",
+  "Savannah, GA",
+  //Apr 2010
+  "Washington, DC",
+  "Savannah, GA",
+  //May
+  "Atlanta, GA",
+  "Memphis, TN",
+  "Atlanta, GA",
+  "Savannah, GA",
+  //Jul
+  "New York, NY",
+  "Scranton, NY",
+  "Buffalo, NY",
+  "Bluefield, WV",
+  "Savannah, GA",
+  //Dec
+  "Orlando, FL",
+  "Savannah, GA",
+];
+
+var FAMILY_2011 = [
+  //Mar
+  "Atlanta, GA",
+  "Savannah, GA",
+  //Jul
+  "Sacramento, CA",
+  "San Francisco, CA",
+  "Sacramento, CA",
+  "Savannah, GA",
+  //Nov
+  "Myrtle Beach, SC",
+  "Savannah, GA",
+  "Boston, MA",
+  "Savannah, GA",
+];
+
+var FAMILY_2011_INDIA = [
+  //Dec
+  "Atlanta, GA",
+  "Paris, France",
+  "Delhi, India",
+  "Aurangabad, India",
+  "Shirdi, India",
+  "Jammu, India",
+  "Paris, France",
+  "Atlanta, GA",
+  "Savannah, GA",
+];
+
+var FAMILY_2012 = [
+  //Jun 2012
+  "St. Augustine, FL",
+  "Savannah, GA",
+  "Washington, DC",
+  "Savannah, GA",
+  //Jul
+  "Jacksonville, FL",
+  "Savannah, GA",
+  //Aug
+  "Knoxville, KY",
+  "Chicago, IL",
+  "Knoxville, KY",
+  "Savannah, GA",
+  //Nov
+  "San Francisco",
+  "Savannah, GA",
+  //Feb 2013
   "Manning, SC",
   "Kingstree, SC",
   "Savannah, GA",
 ];
 
-var FAMILY_2013_ = [
+var FAMILY_2013 = [
   //May
   "New York, NY", //any stops on the way?
   "New Haven, CT",
@@ -152,7 +226,12 @@ var FAMILY_2016__ = [
 
 module.exports = {
   "Aryaman": [
-    "Savannah, GA",
+    FAMILY_IMMIGRATION,
+    FAMILY_2010,
+    FAMILY_2011,
+    FAMILY_2011_INDIA,
+    FAMILY_2012,
+    FAMILY_2013,
     FAMILY_2014,
     "Atlanta, GA",
     "Baltimore, MD",
@@ -167,7 +246,12 @@ module.exports = {
     FAMILY_2016__,
   ],
   "Amay": [
-    "Savannah, GA",
+    FAMILY_IMMIGRATION,
+    FAMILY_2010,
+    FAMILY_2011,
+    FAMILY_2011_INDIA,
+    FAMILY_2012,
+    FAMILY_2013,
     FAMILY_2014,
     FAMILY_2014_,
     FAMILY_2015,
@@ -178,8 +262,13 @@ module.exports = {
     FAMILY_2016__,
   ],
   "Anshu": [
+    FAMILY_IMMIGRATION,
+    "Atlanta, GA",
     "Savannah, GA",
-    FAMILY_2013,
+    FAMILY_2010,
+    FAMILY_2011,
+    FAMILY_2011_INDIA,
+    FAMILY_2012,
     "Charleston, SC",
     "Savannah, GA",
     "St. Paul, MN",
@@ -190,7 +279,7 @@ module.exports = {
     "Philadelphia, PA",
     "Atlanta, GA",
     "Savannah, GA",
-    FAMILY_2013_,
+    FAMILY_2013,
     "Atlanta, GA",
     "Los Angeles, CA",
     "Sydney, Australia",
@@ -219,13 +308,26 @@ module.exports = {
     FAMILY_2016__,
   ],
   "Amit": [
+    FAMILY_IMMIGRATION,
+    "Atlanta, GA",
     "Savannah, GA",
-    FAMILY_2013,
+    FAMILY_2010,
+    FAMILY_2011,
+    "Atlanta, GA",
+    "Dubai, UAE",
+    "Delhi, India",
+    "Aurangabad, India",
+    "Shirdi, India",
+    "Jammu, India",
+    "Dubai, UAE",
+    "Atlanta, GA",
+    "Savannah, GA",
+    FAMILY_2012,
     "Atlanta, GA",
     "Philadelphia, PA",
     "Atlanta, GA",
     "Savannah, GA",
-    FAMILY_2013_,
+    FAMILY_2013,
     FAMILY_2014,
     FAMILY_2014_,
     "Atlanta, GA",
