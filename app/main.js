@@ -38,8 +38,8 @@ module.exports = function() {
 
       d3.select(".container").append("h2").text("North America");
       makeMap(".container", projections.northAmerica(width), processed, world);
-      d3.select(".container").append("h2").text("United Kingdom");
-      makeMap(".container", projections.uk(width * 0.5), processed, world);
+      d3.select(".container").append("h2").text("East Coast");
+      makeMap(".container", projections.eastCoast(width), processed, world);
       d3.select(".container").append("h2").text("Europe");
       makeMap(".container", projections.europe(width), processed, world);
       d3.select(".container").append("h2").text("World");
