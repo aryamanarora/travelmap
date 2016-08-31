@@ -50,8 +50,8 @@ exports.northAmerica = function(width) {
 
 exports.eastCoast = function(width) {
   return mercatorProj(width, [
-    [-90, 45],
-    [-60, 23]
+    [-100, 45],
+    [-70, 23]
   ]);
 }
 
