@@ -230,7 +230,6 @@ module.exports.makeBars = function(visitedByAtLeastN) {
 
   trs
     .append("td")
-<<<<<<< HEAD
     .attr("class", "visited-by")
     .html(function(d) {
       return (
@@ -243,8 +242,6 @@ module.exports.makeBars = function(visitedByAtLeastN) {
 
   trs
     .append("td")
-=======
->>>>>>> jlfwong/bonnie
     .attr("class", "countries")
     .append("span")
     .append("div")
