@@ -18,7 +18,7 @@ var FAMILY_2010 = [
   "Savannah, GA",
   //Jul
   "New York, NY",
-  "Scranton, NY",
+  "Scranton, PA",
   "Buffalo, NY",
   "Bluefield, WV",
   "Savannah, GA",
@@ -105,9 +105,14 @@ var FAMILY_2012_ = [
 
 var FAMILY_2013 = [
   //May
+  "Richmond, VA",
   "New York, NY", //any stops on the way?
   "New Haven, CT",
+  "Richmond, VA",
   "Savannah, GA",
+];
+
+var FAMILY_2013_ = [
   //Jul
   "Jacksonville, FL",
   "St. Augustine, FL",
@@ -119,7 +124,10 @@ var FAMILY_2013 = [
   "Atlanta, GA",
   "Savannah, GA",
   //Nov
+  "Richmond, VA",
+  "Washington, DC",
   "Baltimore, MD",
+  "Richmond, VA",
   "Savannah, GA",
   //Jan 2014
   "Kingstree, SC",
@@ -151,6 +159,9 @@ var FAMILY_2014 = [
   //Jun
   "Charleston, SC",
   "Savannah, GA",
+];
+
+var FAMILY_2014~ = [
   "Detroit, MI",
   "London, UK",
   "Nottingham, UK",
@@ -180,6 +191,9 @@ var FAMILY_2015 = [
   //Jan
   "Atlanta, GA",
   "Savannah, GA",
+];
+
+var FAMILY_2015_ = [
   //Feb
   "Manning, SC",
   "Kingstree, SC",
@@ -190,7 +204,7 @@ var FAMILY_2015 = [
   "Savannah, GA",
 ];
 
-var FAMILY_2016 = [
+var FAMILY_2015__ = [
   //May
   "Hopewell, VA",
   "Philadelphia, PA",
@@ -207,6 +221,9 @@ var FAMILY_2016 = [
   "Paris, France",
   "Atlanta, GA",
   "Savannah, GA",
+];
+
+var FAMILY_2016 = [
   //Nov
   "Seattle, WA",
   "Savannah, GA",
@@ -225,7 +242,6 @@ var FAMILY_2016 = [
   "Woodbridge, VA",
   "Boston, MA",
   "Woodbridge, VA",
-  "Boston, MA",
   "Savannah, GA",
   //Jun
   "Atlanta, GA",
@@ -260,15 +276,19 @@ module.exports = {
     "Charleston, SC",
     "Savannah, GA",
     FAMILY_2013,
+    FAMILY_2013_,
     FAMILY_2014,
+    FAMILY_2014~,
     "Atlanta, GA",
     "Baltimore, MD",
     "Atlanta, GA",
     "Savannah, GA",
     FAMILY_2014_,
     FAMILY_2015,
+    FAMILY_2015_,
     "Folkston, GA",
     "Savannah, GA",
+    FAMILY_2015__,
     FAMILY_2016,
     FAMILY_2016_,
     FAMILY_2016__,
@@ -284,9 +304,13 @@ module.exports = {
     "Charleston, SC",
     "Savannah, GA",
     FAMILY_2013,
+    FAMILY_2013_,
     FAMILY_2014,
+    FAMILY_2014~,
     FAMILY_2014_,
     FAMILY_2015,
+    FAMILY_2015_,
+    FAMILY_2015__,
     FAMILY_2016,
     "Greensboro, NC",
     "Raleigh, NC",
@@ -302,11 +326,16 @@ module.exports = {
     FAMILY_2011_,
     FAMILY_2011_INDIA,
     FAMILY_2012,
-    "Charlotte, NC",
+    "Charlotte, NC", //Dec
     "Richmond, VA",
     "Charlotte, NC",
+    "Savannah, GA", //Jan
+    "Atlanta, GA",
+    "Philadelphia, PA",
+    "Atlanta, GA",
+    "Savannah, GA",
     FAMILY_2012_,
-    "Charleston, SC",
+    "Charleston, SC", //Feb
     "Savannah, GA",
     "St. Paul, MN",
     "Chicago, IL",
@@ -327,6 +356,11 @@ module.exports = {
     "Dallas, TX",
     "Savannah, GA",
     FAMILY_2013,
+    "Charlotte, NC",
+    "New York, NY",
+    "Charlotte, NC",
+    "Savannah, GA",
+    FAMILY_2013_,
     "Atlanta, GA",
     "Los Angeles, CA",
     "Sydney, Australia",
@@ -336,6 +370,7 @@ module.exports = {
     "Atlanta, GA",
     "Savannah, GA",
     FAMILY_2014,
+    FAMILY_2014~,
     "Atlanta, GA",
     "Baltimore, MD",
     "Atlanta, GA",
@@ -344,6 +379,14 @@ module.exports = {
     "Atlanta, GA",
     "Savannah, GA",
     FAMILY_2015,
+    "San Antonio, TX",
+    "Savannah, GA",
+    FAMILY_2015_,
+    "Atlanta, GA",
+    "Chicago, IL",
+    "Atlanta, GA",
+    "Savannah, GA",
+    FAMILY_2015__,
     FAMILY_2016,
     "Greensboro, NC",
     "Raleigh, NC",
@@ -390,11 +433,23 @@ module.exports = {
     "Richmond, VA",
     "Savannah, GA",
     FAMILY_2013,
+    FAMILY_2013_,
     FAMILY_2014,
+    "Atlanta, GA",
+    "Memphis, TN",
+    "Atlanta, GA",
+    "Savannah, GA",
+    FAMILY_2014~,
+    "New York, NY",
+    "Delhi, India",
+    "New York, NY",
+    "Savannah, GA",
     FAMILY_2014_,
     "Atlanta, GA",
     "Savannah, GA",
     FAMILY_2015,
+    FAMILY_2015_,
+    FAMILY_2015__,
     FAMILY_2016,
     "Greensboro, NC",
     "Raleigh, NC",
