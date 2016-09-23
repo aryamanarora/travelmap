@@ -300,6 +300,8 @@ module.exports = {
     FAMILY_2016_,
     FAMILY_2016__,
     FAMILY_2016___,
+    "Charleston, SC",
+    "Savannah, GA",
   ],
   "Amay": [
     FAMILY_IMMIGRATION,
