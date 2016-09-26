@@ -62,9 +62,9 @@ exports.europe = function(width) {
   ]);
 };
 
-exports.uk = function(width) {
+exports.india = function(width) {
   return mercatorProj(width, [
-    [-10, 59.1],
-    [3, 50]
+    [65, 40],
+    [100, 5]
   ]);
 };
