@@ -1,3 +1,9 @@
+var FAMILY_2007 = [
+  //Jun 2007
+  "Rishikesh, India",
+  "Delhi, India",
+]
+
 var FAMILY_IMMIGRATION = [
   "Delhi, India",
   "New York, NY",
@@ -276,6 +282,8 @@ var FAMILY_2016___ = [
 
 module.exports = {
   "Aryaman": [
+    "Delhi, India",
+    FAMILY_2007,
     FAMILY_IMMIGRATION,
     FAMILY_2010,
     FAMILY_2011,
@@ -308,6 +316,8 @@ module.exports = {
     "Savannah, GA",
   ],
   "Amay": [
+    "Delhi, India",
+    FAMILY_2007,
     FAMILY_IMMIGRATION,
     FAMILY_2010,
     FAMILY_2011,
@@ -334,6 +344,24 @@ module.exports = {
     FAMILY_2016___,
   ],
   "Anshu": [
+    "Delhi, India",
+    FAMILY_2007,
+    "New York, NY",
+    "Phoenix, AZ",
+    "Grand Canyon National Park, AZ",
+    "Phoenix, AZ",
+    "San Francisco, CA",
+    "Phoenix, AZ",
+    "Cincinnati, OH",
+    "Lexington, KY",
+    "Chicago, IL",
+    "Delhi, India",
+    "Frankfurt, Germany",
+    "Chicago, IL",
+    "Savannah, GA",
+    "Chicago, IL",
+    "Frankfurt, Germany",
+    "Delhi, India",
     FAMILY_IMMIGRATION,
     "Atlanta, GA",
     "Savannah, GA",
@@ -426,6 +454,9 @@ module.exports = {
     FAMILY_2016___,
   ],
   "Amit": [
+    "Delhi, India",
+    FAMILY_2007,
+    "Mumbai, India",
     FAMILY_IMMIGRATION,
     "Atlanta, GA",
     "Savannah, GA",
