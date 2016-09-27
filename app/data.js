@@ -206,6 +206,7 @@ var FAMILY_2015_ = [
   //Feb
   "Manning, SC",
   "Kingstree, SC",
+  "Savannah, GA",
   //Mar
   "Atlanta, GA",
   "Savannah, GA",
@@ -480,6 +481,7 @@ module.exports = {
     "Washington, DC",
     "Savannah, GA",
     FAMILY_2012,
+    FAMILY_2012M,
     FAMILY_2012_,
     "Charleston, SC",
     "Savannah, GA",
