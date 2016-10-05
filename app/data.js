@@ -106,6 +106,9 @@ var FAMILY_2012_ = [
   "San Francisco",
   "Washington, DC",
   "Savannah, GA",
+];
+
+var FAMILY_2013_BEE = [
   //Feb 2013
   "Manning, SC",
   "Kingstree, SC",
@@ -293,6 +296,10 @@ module.exports = {
     FAMILY_2012,
     FAMILY_2012M,
     FAMILY_2012_,
+    "Atlanta, GA",
+    "Athens, GA",
+    "Savannah, GA",
+    FAMILY_2013_BEE,
     "Charleston, SC",
     "Savannah, GA",
     FAMILY_2013,
@@ -327,6 +334,10 @@ module.exports = {
     FAMILY_2012,
     FAMILY_2012M,
     FAMILY_2012_,
+    "Atlanta, GA",
+    "Athens, GA",
+    "Savannah, GA",
+    FAMILY_2013_BEE,
     "Charleston, SC",
     "Savannah, GA",
     FAMILY_2013,
@@ -389,6 +400,10 @@ module.exports = {
     "Atlanta, GA",
     "Savannah, GA",
     FAMILY_2012_,
+    "Atlanta, GA",
+    "Athens, GA",
+    "Savannah, GA",
+    FAMILY_2013_BEE,
     "Charleston, SC", //Feb
     "Savannah, GA",
     "St. Paul, MN",
@@ -483,6 +498,10 @@ module.exports = {
     FAMILY_2012,
     FAMILY_2012M,
     FAMILY_2012_,
+    "Atlanta, GA",
+    "Athens, GA",
+    "Savannah, GA",
+    FAMILY_2013_BEE,
     "Charleston, SC",
     "Savannah, GA",
     "Atlanta, GA",
