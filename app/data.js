@@ -282,7 +282,12 @@ var FAMILY_2016___ = [
   "St. Augustine, FL",
   "Jacksonville, FL",
   "Savannah, GA",
-]
+];
+
+var FAMILY_2016____ = [
+  //Oct
+  "Macon, GA",
+];
 
 module.exports = {
   "Aryaman": [
@@ -322,6 +327,7 @@ module.exports = {
     FAMILY_2016___,
     "Charleston, SC",
     "Savannah, GA",
+    FAMILY_2016____,
   ],
   "Amay": [
     "Delhi, India",
@@ -354,6 +360,9 @@ module.exports = {
     FAMILY_2016_,
     FAMILY_2016__,
     FAMILY_2016___,
+    "Charleston, SC",
+    "Savannah, GA",
+    FAMILY_2016____,
   ],
   "Anshu": [
     "Delhi, India",
@@ -468,6 +477,7 @@ module.exports = {
     "Atlanta, GA",
     "Savannah, GA",
     FAMILY_2016___,
+    FAMILY_2016____,
   ],
   "Amit": [
     "Delhi, India",
@@ -538,5 +548,6 @@ module.exports = {
     "Atlanta, GA",
     "Savannah, GA",
     FAMILY_2016___,
+    FAMILY_2016____,
   ],
 };
