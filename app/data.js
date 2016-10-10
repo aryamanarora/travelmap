@@ -287,6 +287,8 @@ var FAMILY_2016___ = [
 var FAMILY_2016____ = [
   //Oct
   "Macon, GA",
+  "Atlanta, GA",
+  "Savannah, GA",
 ];
 
 module.exports = {
