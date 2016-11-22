@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  background: #fff;
+  font-family: Economica;
+  font-size: 17px;
+}
+.landing {
+  min-height: 100%;
+}
+h1,
+h2 {
+  clear: both;
+  font-family: Cardo, san-serif;
+  text-align: center;
+}
+h1 {
+  color: #303f9f;
+  margin-top: 300px;
+  font-size: 72pt;
+  margin-bottom: 5px;
+}
+h2 {
+  color: #3f51b5;
+  font-size: 48pt;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+svg {
+  display: block;
+  margin: 0 auto 0 auto;
+}
+svg .boundary {
+  fill: none;
+  stroke: #000;
+  stroke-width: 0.5px;
+}
+table.bars {
+  color: #777;
+  margin: 0 auto 50px auto;
+  width: 90%;
+  border-collapse: collapse;
+}
+table.bars th {
+  font-weight: bold;
+  color: #000;
+  opacity: 0.87;
+}
+table.bars td div {
+  display: inline-block;
+  color: #fff;
+}
+table.bars td div span {
+  padding: 0 5px;
+}
+table.bars .places {
+  width: 50%;
+  text-align: right;
+}
+table.bars .places div {
+  background: #3f51b5;
+}
+table.bars .visited-by {
+  min-width: 100px;
+  text-align: center;
+  color: #000;
+  opacity: 0.87;
+}
+table.bars .countries {
+  width: 50%;
+  text-align: left;
+}
+table.bars .countries div {
+  background: #ff4081;
+}
+.outer-container {
+  position: relative;
+}
+.toggles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 10px;
+}
+.toggles.stuck {
+  position: fixed;
+}
+.toggles ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.toggles li {
+  margin-bottom: 0.5em;
+}
+.toggles a {
+  color: #666;
+  margin-right: 0.5em;
+}
+.container {
+  margin: 0 auto;
+}
+
+
+/*# sourceMappingURL=app.css.map*/

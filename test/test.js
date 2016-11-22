@@ -1,3 +1,119 @@
+(function() {
+  'use strict';
+
+  var globals = typeof window === 'undefined' ? global : window;
+  if (typeof globals.require === 'function') return;
+
+  var modules = {};
+  var cache = {};
+  var aliases = {};
+  var has = ({}).hasOwnProperty;
+
+  var expRe = /^\.\.?(\/|$)/;
+  var expand = function(root, name) {
+    var results = [], part;
+    var parts = (expRe.test(name) ? root + '/' + name : name).split('/');
+    for (var i = 0, length = parts.length; i < length; i++) {
+      part = parts[i];
+      if (part === '..') {
+        results.pop();
+      } else if (part !== '.' && part !== '') {
+        results.push(part);
+      }
+    }
+    return results.join('/');
+  };
+
+  var dirname = function(path) {
+    return path.split('/').slice(0, -1).join('/');
+  };
+
+  var localRequire = function(path) {
+    return function expanded(name) {
+      var absolute = expand(dirname(path), name);
+      return globals.require(absolute, path);
+    };
+  };
+
+  var initModule = function(name, definition) {
+    var hot = null;
+    hot = hmr && hmr.createHot(name);
+    var module = {id: name, exports: {}, hot: hot};
+    cache[name] = module;
+    definition(module.exports, localRequire(name), module);
+    return module.exports;
+  };
+
+  var expandAlias = function(name) {
+    return aliases[name] ? expandAlias(aliases[name]) : name;
+  };
+
+  var _resolve = function(name, dep) {
+    return expandAlias(expand(dirname(name), dep));
+  };
+
+  var require = function(name, loaderPath) {
+    if (loaderPath == null) loaderPath = '/';
+    var path = expandAlias(name);
+
+    if (has.call(cache, path)) return cache[path].exports;
+    if (has.call(modules, path)) return initModule(path, modules[path]);
+
+    throw new Error("Cannot find module '" + name + "' from '" + loaderPath + "'");
+  };
+
+  require.alias = function(from, to) {
+    aliases[to] = from;
+  };
+
+  var extRe = /\.[^.\/]+$/;
+  var indexRe = /\/index(\.[^\/]+)?$/;
+  var addExtensions = function(bundle) {
+    if (extRe.test(bundle)) {
+      var alias = bundle.replace(extRe, '');
+      if (!has.call(aliases, alias) || aliases[alias].replace(extRe, '') === alias + '/index') {
+        aliases[alias] = bundle;
+      }
+    }
+
+    if (indexRe.test(bundle)) {
+      var iAlias = bundle.replace(indexRe, '');
+      if (!has.call(aliases, iAlias)) {
+        aliases[iAlias] = bundle;
+      }
+    }
+  };
+
+  require.register = require.define = function(bundle, fn) {
+    if (typeof bundle === 'object') {
+      for (var key in bundle) {
+        if (has.call(bundle, key)) {
+          require.register(key, bundle[key]);
+        }
+      }
+    } else {
+      modules[bundle] = fn;
+      delete cache[bundle];
+      addExtensions(bundle);
+    }
+  };
+
+  require.list = function() {
+    var list = [];
+    for (var item in modules) {
+      if (has.call(modules, item)) {
+        list.push(item);
+      }
+    }
+    return list;
+  };
+
+  var hmr = globals._hmr && new globals._hmr(_resolve, require, modules, cache);
+  require._cache = cache;
+  require.hmr = hmr && hmr.wrap;
+  require.brunch = true;
+  globals.require = require;
+})();
 var geocode = require("lib/geocode");
 
 describe('geocode', function() {
@@ -246,3 +362,76 @@ var PARIS_REVERSE_RESPONSE = {
     "osm_type": "relation",
     "place_id": "97357969"
 };
+
+var localStorageMemoize = require("lib/localstorage_memoize");
+
+describe('localStorageMemoize', function() {
+  it('returns identical results', function() {
+    var fib = function(n) {
+      return n < 2 ? n : fib(n - 1) + fib(n - 2);
+    };
+    var memoFib = localStorageMemoize('fib', fib);
+    expect(memoFib(10)).to.be(fib(10));
+    expect(memoFib(10)).to.be(fib(10));
+  });
+  it('uses all arguments for caching', function() {
+    var mult = function(a, b) {
+      return a * b;
+    };
+    var memoMult = localStorageMemoize('mult', mult);
+    memoMult.clear();
+    expect(mult(2, 3)).to.be(memoMult(2, 3));
+    expect(mult(2, 3)).to.be(memoMult(2, 3));
+    expect(mult(2, 3)).to.be(memoMult(2, 3));
+    expect(mult(2, 4)).to.be(memoMult(2, 4));
+    expect(mult(2, 4)).to.be(memoMult(2, 4));
+  });
+
+  describe('promise', function() {
+    it('returns identical results', function(done) {
+      var slowMult = function(a, b) {
+        var deferred = $.Deferred();
+        setTimeout(function() {
+          deferred.resolveWith(null, [a * b]);
+        }, 50);
+        return deferred.promise();
+      };
+      var memoSlowMult = localStorageMemoize.promise('slowMult', slowMult);
+      memoSlowMult.clear();
+
+      var sm = slowMult(3, 7);
+      var msm = memoSlowMult(3, 7);
+
+      $.when(sm, msm).then(function(m1, m2) {
+        expect(m1).to.be(m2);
+        memoSlowMult(3, 7).then(function(m3) {
+          expect(m3).to.be(m1);
+          done();
+        });
+      });
+    });
+  });
+});
+
+var uniqueCounter = require("lib/unique_counter");
+
+describe('uniqueCounter', function() {
+  it('allocates an int per unique item', function() {
+    var cnt = uniqueCounter();
+    expect(cnt('Jim')).to.be(0);
+    expect(cnt('Joe')).to.be(1);
+    expect(cnt('Jon')).to.be(2);
+    expect(cnt('Jim')).to.be(0);
+    expect(cnt('Jon')).to.be(2);
+
+    var cnt2 = uniqueCounter();
+    expect(cnt2('Bob')).to.be(0);
+    expect(cnt2('Ben')).to.be(1);
+    expect(cnt2('Bob')).to.be(0);
+    expect(cnt('Jon')).to.be(2);
+    expect(cnt('Jet')).to.be(3);
+  });
+});
+
+
+//# sourceMappingURL=test.js.map
