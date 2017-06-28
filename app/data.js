@@ -407,6 +407,8 @@ module.exports = {
     "Delhi, India",
     "Agra, India",
     "Jaipur, India",
+    "Delhi, India",
+    "Mumbai, India",
     "Goa, India",
     "Delhi, India",
     "Brussels, Belgium",
